@@ -1,14 +1,716 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cursos — UniALFA</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"></head>
+
+<head>
+    <!-- Configurações básicas de HTML5 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cursos — UniALFA Umuarama</title>
+    
+    <!-- Bootstrap CSS: Framework responsivo para layout e componentes -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS específico da página de cursos: estilos para cards e modals -->
+    <link rel="stylesheet" href="css/cursos.css">
+</head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--brand-primary);">
-  <div class="container"><a class="navbar-brand fw-bold" href="index.html"><span class="text-info">Uni</span>ALFA</a></div>
-</nav>
-<div class="container py-5"><h1 class="display-6">Cursos</h1><p class="lead">Esta página é apenas ilustrativa. A Home contém todo o conteúdo principal para a apresentação.</p>
-<a class="btn btn-primary" href="index.html">Voltar à Home</a></div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body></html>
+
+    <!-- ====================================================
+         NAVBAR - BARRA DE NAVEGAÇÃO RESPONSIVA
+         ==================================================== -->
+    <!-- navbar: Classe Bootstrap que cria barra de navegação -->
+    <!-- navbar-expand-lg: Menu expande em telas Large (≥992px), colapsa em mobile -->
+    <!-- navbar-dark: Tema escuro - texto branco para contraste com fundo escuro -->
+    <!-- navbar-customed: Classe CSS personalizada que define cor de fundo azul -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-customed">
+        
+        <!-- container: Classe Bootstrap que centraliza conteúdo e adiciona margens responsivas -->
+        <!-- Limita largura máxima e centraliza horizontalmente -->
+        <div class="container">
+            
+            <!-- LOGO/MARCA DA EMPRESA -->
+            <!-- navbar-brand: Classe Bootstrap para logo/nome da marca -->
+            <!-- fw-bold: Font-weight bold (negrito) do Bootstrap -->
+            <!-- text-info: Classe Bootstrap que aplica cor ciano (#0dcaf0) -->
+            <a class="navbar-brand fw-bold" href="index.html"><span class="text-info">Uni</span>ALFA</a>
+            
+            <!-- BOTÃO HAMBÚRGUER PARA MOBILE -->
+            <!-- navbar-toggler: Botão que aparece apenas em mobile para abrir/fechar menu -->
+            <!-- data-bs-toggle="collapse": Atributo que ativa funcionalidade de colapsar -->
+            <!-- data-bs-target="#nav": Define qual elemento será expandido/colapsado -->
+            <!-- aria-*: Atributos de acessibilidade para leitores de tela -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Alternar navegação">
+                <!-- Ícone do hambúrguer (3 linhas) -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- MENU DE NAVEGAÇÃO -->
+            <!-- collapse navbar-collapse: Classes Bootstrap para menu responsivo -->
+            <!-- collapse: Esconde elemento por padrão -->
+            <!-- navbar-collapse: Comportamento específico para navbar -->
+            <!-- O menu fica visível em desktop e escondido em mobile -->
+            <div class="collapse navbar-collapse" id="nav">
+                
+                <!-- LISTA DE LINKS DO MENU -->
+                <!-- navbar-nav: Classe Bootstrap para lista de navegação -->
+                <!-- ms-auto: Margin-start auto - empurra menu para a direita -->
+                <ul class="navbar-nav ms-auto">
+                    
+                    <!-- ITENS INDIVIDUAIS DO MENU -->
+                    <!-- nav-item: Classe Bootstrap para cada item da lista -->
+                    <!-- nav-link: Classe Bootstrap para links de navegação -->
+                    <!-- active: Classe que indica a página atual -->
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="infraestrutura.html">Infraestrutura</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====================================================
+         SEÇÃO HERO - BANNER PRINCIPAL DA PÁGINA
+         ==================================================== -->
+    <!-- section: Elemento HTML5 semântico para seções de conteúdo -->
+    <!-- hero: Classe CSS personalizada que define imagem de fundo e overlay escuro -->
+    <!-- text-center: Classe Bootstrap que centraliza todo texto horizontalmente -->
+    <section class="hero text-center">
+        
+        <!-- container: Classe Bootstrap que limita largura e centraliza conteúdo -->
+        <!-- Responsivo: 100% em mobile, largura fixa em desktop -->
+        <div class="container">
+            
+            <!-- TÍTULO PRINCIPAL -->
+            <!-- display-5: Classe Bootstrap para títulos grandes e chamativos -->
+            <!-- fw-bold: Font-weight bold (negrito) para dar destaque -->
+            <h1 class="display-5 fw-bold">Nossos Cursos</h1>
+            
+            <!-- SUBTÍTULO DESCRITIVO -->
+            <!-- lead: Classe Bootstrap que aumenta tamanho da fonte para subtítulos -->
+            <!-- mt-3: Margin-top de 1rem (16px) para espaçamento vertical -->
+            <p class="lead mt-3">
+                Conheça todos os cursos que oferecemos e escolha o ideal para sua carreira!
+            </p>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SEÇÃO PRINCIPAL - GRID DE CURSOS
+         ==================================================== -->
+    <!-- container: Centraliza e limita largura do conteúdo -->
+    <!-- py-5: Padding vertical de 3rem (48px) - top e bottom -->
+    <!-- id="cursos": Identificador para navegação por âncoras -->
+    <section class="container py-5" id="cursos">
+        
+        <!-- SISTEMA DE GRID BOOTSTRAP -->
+        <!-- row: Classe Bootstrap que cria linha horizontal no sistema de grid -->
+        <!-- g-4: Gap (espaçamento) de 1.5rem entre colunas e linhas -->
+        <div class="row g-4">
+
+            <!-- Card do curso de Administração -->
+            <!-- col-md-6: 2 colunas em tablets (6 de 12) -->
+            <!-- col-lg-4: 3 colunas em desktop (4 de 12) -->
+            <div class="col-md-6 col-lg-4">
+                <!-- card: Componente Bootstrap para conteúdo estruturado -->
+                <!-- h-100: Height 100% para cards de tamanho igual -->
+                <div class="card h-100">
+                    <!-- card-img-top: Imagem no topo do card (Bootstrap) -->
+                    <!-- object-fit: cover: Mantém proporção e preenche área -->
+                    <img src="img/administracao.jpg" class="card-img-top" alt="Administração">
+                    
+                    <!-- card-body: Área de conteúdo do card -->
+                    <!-- d-flex flex-column: Flexbox vertical para layout -->
+                    <div class="card-body d-flex flex-column">
+                        <!-- card-title: Título do card (Bootstrap) -->
+                        <h5 class="card-title">Administração</h5>
+                        
+                        <!-- card-text: Texto descritivo do card -->
+                        <p class="card-text">
+                            Aprenda a planejar, organizar, dirigir e controlar recursos humanos, financeiros e materiais de uma empresa. Este curso prepara você para cargos de liderança e gestão.
+                        </p>
+                        
+                        <!-- mt-auto: Empurra botão para o fim (margin-top auto) -->
+                        <!-- Garante que botões fiquem alinhados mesmo com textos diferentes -->
+                        <div class="mt-auto">
+                            <!-- btn btn-primary: Botão azul do Bootstrap -->
+                            <!-- data-bs-toggle="modal": Ativa modal do Bootstrap -->
+                            <!-- data-bs-target: ID do modal a ser aberto -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAdministracao">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ciências Contábeis -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="img/ciencias-contabeis.jpg" class="card-img-top" alt="Ciências Contábeis">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Ciências Contábeis</h5>
+                        <p class="card-text">
+                            Formação completa em contabilidade, auditoria, finanças e controladoria. Ideal para quem deseja atuar em empresas, escritórios contábeis ou órgãos públicos.
+                        </p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalContabeis">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Direito -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="img/direito.jpg" class="card-img-top" alt="Direito">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Direito</h5>
+                        <p class="card-text">
+                            Explore áreas como direito civil, penal, trabalhista e empresarial. O curso prepara você para atuar como advogado, consultor jurídico ou em órgãos públicos.
+                        </p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDireito">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gestão Hospitalar -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="img/gestao-hospitalar.jpg" class="card-img-top" alt="Gestão Hospitalar">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Gestão Hospitalar</h5>
+                        <p class="card-text">
+                            Aprenda a gerenciar hospitais, clínicas e unidades de saúde. O curso aborda administração hospitalar, logística de saúde e gestão de qualidade.
+                        </p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalGestao">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="img/marketing.jpg" class="card-img-top" alt="Marketing">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Marketing</h5>
+                        <p class="card-text">
+                            Curso voltado para estratégias de marketing digital, branding, publicidade e vendas. Prepare-se para atuar em empresas, agências ou como consultor independente.
+                        </p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMarketing">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pedagogia -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="img/pedagogia.jpg" class="card-img-top" alt="Pedagogia">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Pedagogia</h5>
+                        <p class="card-text">
+                            Formação para atuar na educação infantil, séries iniciais ou em educação de jovens e adultos. Desenvolva habilidades pedagógicas e de gestão educacional.
+                        </p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPedagogia">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Processos Gerenciais -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="img/processos-gerenciais.jpg" class="card-img-top" alt="Processos Gerenciais">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Processos Gerenciais</h5>
+                        <p class="card-text">
+                            Aprenda a planejar, organizar e otimizar processos dentro de empresas. Ideal para quem deseja atuar em gestão de equipes e eficiência operacional.
+                        </p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalGerenciais">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recursos Humanos -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="img/recursos-humanos.jpg" class="card-img-top" alt="Recursos Humanos">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Recursos Humanos</h5>
+                        <p class="card-text">
+                            Capacite-se em recrutamento, seleção, treinamento, desenvolvimento de pessoal e gestão de clima organizacional. Perfeito para atuar em RH corporativo ou consultorias.
+                        </p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalHumanos">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sistemas para Internet -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="img/sistemas-para-internet.jpg" class="card-img-top" alt="Sistemas para Internet">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Sistemas para Internet</h5>
+                        <p class="card-text">
+                            Desenvolva habilidades em programação web, desenvolvimento de sites, aplicativos e sistemas online. Ideal para quem deseja atuar na área de tecnologia.
+                        </p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSistemas">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Psicologia -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="img/curso-psicologia.jpg" class="card-img-top" alt="Psicologia">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Psicologia</h5>
+                        <p class="card-text">
+                            Estude o comportamento humano e desenvolva habilidades para atuar em clínicas, hospitais, empresas ou consultórios particulares.
+                        </p>
+                        <div class="mt-auto">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPsicologia">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MODALS -->
+    
+    <!-- Modal detalhado do curso de Administração -->
+    <!-- modal fade: Componente modal do Bootstrap com animação -->
+    <!-- tabindex="-1": Remove da navegação por teclado -->
+    <!-- aria-labelledby: Acessibilidade - referência ao título -->
+    <!-- aria-hidden="true": Escondido para leitores de tela inicialmente -->
+    <div class="modal fade" id="modalAdministracao" tabindex="-1" aria-labelledby="modalAdministracaoLabel" aria-hidden="true">
+        <!-- modal-dialog: Container do modal -->
+        <!-- modal-lg: Modal grande (maior que o padrão) -->
+        <div class="modal-dialog modal-lg">
+            <!-- modal-content: Conteúdo visível do modal -->
+            <div class="modal-content">
+                <!-- modal-header: Cabeçalho com título e botão fechar -->
+                <div class="modal-header">
+                    <!-- modal-title: Título do modal (Bootstrap) -->
+                    <h5 class="modal-title" id="modalAdministracaoLabel">Administração</h5>
+                    
+                    <!-- btn-close: Botão X para fechar modal -->
+                    <!-- data-bs-dismiss="modal": Fecha o modal quando clicado -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <!-- modal-body: Corpo principal com conteúdo -->
+                <div class="modal-body">
+                    <!-- Grid para organizar imagem e texto lado a lado -->
+                    <div class="row">
+                        <!-- Coluna da imagem (50% em tablets+) -->
+                        <div class="col-md-6">
+                            <!-- img-fluid: Imagem responsiva (100% width, height auto) -->
+                            <!-- rounded: Bordas arredondadas (Bootstrap) -->
+                            <img src="img/administracao.jpg" class="img-fluid rounded" alt="Administração">
+                        </div>
+                        
+                        <!-- Coluna do texto descritivo -->
+                        <div class="col-md-6">
+                            <h4>Sobre o Curso</h4>
+                            <p>Este curso fornece conhecimentos fundamentais em gestão, planejamento e administração de empresas. Ideal para quem deseja atuar em setores administrativos ou empreender.</p>
+                            
+                            <h5>Áreas de Atuação:</h5>
+                            <!-- Lista simples de áreas de trabalho -->
+                            <ul>
+                                <li>Gestão empresarial</li>
+                                <li>Recursos humanos</li>
+                                <li>Finanças corporativas</li>
+                                <li>Consultoria empresarial</li>
+                                <li>Empreendedorismo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- modal-footer: Rodapé com botões de ação -->
+                <div class="modal-footer">
+                    <!-- btn btn-secondary: Botão cinza secundário -->
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    
+                    <!-- btn btn-success: Botão verde de ação principal -->
+                    <!-- Link para página de contato/inscrição -->
+                    <a href="contato.html" class="btn btn-success">Inscrever-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Ciências Contábeis -->
+    <div class="modal fade" id="modalContabeis" tabindex="-1" aria-labelledby="modalContabeisLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalContabeisLabel">Ciências Contábeis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/ciencias-contabeis.jpg" class="img-fluid rounded" alt="Ciências Contábeis">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Sobre o Curso</h4>
+                            <p>Formação completa em contabilidade, auditoria, finanças e controladoria. Ideal para quem deseja atuar em empresas, escritórios contábeis ou órgãos públicos.</p>
+                            <h5>Áreas de Atuação:</h5>
+                            <ul>
+                                <li>Contador</li>
+                                <li>Auditor</li>
+                                <li>Controller</li>
+                                <li>Perito contábil</li>
+                                <li>Consultor financeiro</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="contato.html" class="btn btn-success">Inscrever-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Direito -->
+    <div class="modal fade" id="modalDireito" tabindex="-1" aria-labelledby="modalDireitoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDireitoLabel">Direito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/direito.jpg" class="img-fluid rounded" alt="Direito">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Sobre o Curso</h4>
+                            <p>Estude leis, legislação e práticas jurídicas. Ideal para quem deseja seguir carreira como advogado, consultor ou atuar no setor público.</p>
+                            <h5>Áreas de Atuação:</h5>
+                            <ul>
+                                <li>Advocacia</li>
+                                <li>Magistratura</li>
+                                <li>Ministério Público</li>
+                                <li>Consultoria jurídica</li>
+                                <li>Setor público</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="contato.html" class="btn btn-success">Inscrever-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Gestão Hospitalar -->
+    <div class="modal fade" id="modalGestao" tabindex="-1" aria-labelledby="modalGestaoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGestaoLabel">Gestão Hospitalar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/gestao-hospitalar.jpg" class="img-fluid rounded" alt="Gestão Hospitalar">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Sobre o Curso</h4>
+                            <p>Aprenda a gerenciar hospitais, clínicas e unidades de saúde. O curso aborda administração hospitalar, logística de saúde e gestão de qualidade.</p>
+                            <h5>Áreas de Atuação:</h5>
+                            <ul>
+                                <li>Administração hospitalar</li>
+                                <li>Gestão de clínicas</li>
+                                <li>Qualidade em saúde</li>
+                                <li>Logística hospitalar</li>
+                                <li>Auditoria em saúde</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="contato.html" class="btn btn-success">Inscrever-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Marketing -->
+    <div class="modal fade" id="modalMarketing" tabindex="-1" aria-labelledby="modalMarketingLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMarketingLabel">Marketing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/marketing.jpg" class="img-fluid rounded" alt="Marketing">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Sobre o Curso</h4>
+                            <p>Curso voltado para estratégias de marketing digital, branding, publicidade e vendas. Prepare-se para atuar em empresas, agências ou como consultor independente.</p>
+                            <h5>Áreas de Atuação:</h5>
+                            <ul>
+                                <li>Marketing digital</li>
+                                <li>Publicidade e propaganda</li>
+                                <li>Branding</li>
+                                <li>Vendas</li>
+                                <li>Consultoria em marketing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="contato.html" class="btn btn-success">Inscrever-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pedagogia -->
+    <div class="modal fade" id="modalPedagogia" tabindex="-1" aria-labelledby="modalPedagogiaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPedagogiaLabel">Pedagogia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/pedagogia.jpg" class="img-fluid rounded" alt="Pedagogia">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Sobre o Curso</h4>
+                            <p>Formação para atuar na educação infantil, séries iniciais ou em educação de jovens e adultos. Desenvolva habilidades pedagógicas e de gestão educacional.</p>
+                            <h5>Áreas de Atuação:</h5>
+                            <ul>
+                                <li>Professor de educação infantil</li>
+                                <li>Professor dos anos iniciais</li>
+                                <li>Coordenação pedagógica</li>
+                                <li>Orientação educacional</li>
+                                <li>Educação de jovens e adultos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="contato.html" class="btn btn-success">Inscrever-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Processos Gerenciais -->
+    <div class="modal fade" id="modalGerenciais" tabindex="-1" aria-labelledby="modalGerenciaisLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGerenciaisLabel">Processos Gerenciais</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/processos-gerenciais.jpg" class="img-fluid rounded" alt="Processos Gerenciais">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Sobre o Curso</h4>
+                            <p>Aprenda a planejar, organizar e otimizar processos dentro de empresas. Ideal para quem deseja atuar em gestão de equipes e eficiência operacional.</p>
+                            <h5>Áreas de Atuação:</h5>
+                            <ul>
+                                <li>Gestão de processos</li>
+                                <li>Supervisão operacional</li>
+                                <li>Qualidade e produtividade</li>
+                                <li>Consultoria empresarial</li>
+                                <li>Coordenação de equipes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="contato.html" class="btn btn-success">Inscrever-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Recursos Humanos -->
+    <div class="modal fade" id="modalHumanos" tabindex="-1" aria-labelledby="modalHumanosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalHumanosLabel">Recursos Humanos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/recursos-humanos.jpg" class="img-fluid rounded" alt="Recursos Humanos">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Sobre o Curso</h4>
+                            <p>Capacite-se em recrutamento, seleção, treinamento, desenvolvimento de pessoal e gestão de clima organizacional. Perfeito para atuar em RH corporativo ou consultorias.</p>
+                            <h5>Áreas de Atuação:</h5>
+                            <ul>
+                                <li>Recrutamento e seleção</li>
+                                <li>Treinamento e desenvolvimento</li>
+                                <li>Gestão de pessoas</li>
+                                <li>Consultoria em RH</li>
+                                <li>Clima organizacional</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="contato.html" class="btn btn-success">Inscrever-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Sistemas para Internet -->
+    <div class="modal fade" id="modalSistemas" tabindex="-1" aria-labelledby="modalSistemasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalSistemasLabel">Sistemas para Internet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/sistemas-para-internet.jpg" class="img-fluid rounded" alt="Sistemas para Internet">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Sobre o Curso</h4>
+                            <p>Desenvolva habilidades em programação web, desenvolvimento de sites, aplicativos e sistemas online. Ideal para quem deseja atuar na área de tecnologia.</p>
+                            <h5>Áreas de Atuação:</h5>
+                            <ul>
+                                <li>Desenvolvedor web</li>
+                                <li>Programador</li>
+                                <li>Analista de sistemas</li>
+                                <li>Designer de interfaces</li>
+                                <li>Consultor em TI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="contato.html" class="btn btn-success">Inscrever-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Psicologia -->
+    <div class="modal fade" id="modalPsicologia" tabindex="-1" aria-labelledby="modalPsicologiaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPsicologiaLabel">Psicologia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/curso-psicologia.jpg" class="img-fluid rounded" alt="Psicologia">
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Sobre o Curso</h4>
+                            <p>Estude o comportamento humano e desenvolva habilidades para atuar em clínicas, hospitais, empresas ou consultórios particulares.</p>
+                            <h5>Áreas de Atuação:</h5>
+                            <ul>
+                                <li>Psicologia clínica</li>
+                                <li>Psicologia organizacional</li>
+                                <li>Psicologia escolar</li>
+                                <li>Neuropsicologia</li>
+                                <li>Psicologia social</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="contato.html" class="btn btn-success">Inscrever-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-custom mt-5 text-center p-4">
+        <small class="d-block">© 2025 UniALFA Umuarama</small>
+        <small class="d-block">Av. Paraná, 7327 — Zona III — Umuarama-PR</small>
+        
+        <div class="social-icons d-flex justify-content-center gap-3 mt-3">
+            <a href="https://www.instagram.com/faculdadealfaumuarama/" class="text-light" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/faculdadeAlfaUmuarama/" class="text-light" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UCDaf6TTBhHQg5hRNZ3lX8wg" class="text-light" target="_blank"><i class="bi bi-youtube"></i></a>
+        </div>
+    </footer>
+
+    <!-- WhatsApp FAB -->
+    <a class="whatsapp-fab" href="https://wa.me/5544991168932" target="_blank" aria-label="Fale no WhatsApp">
+        <img src="img/whatsapp.png" alt="">
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js/script.js"></script>
+</body>
+
+</html>

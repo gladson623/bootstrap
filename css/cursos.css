@@ -1,3 +1,7 @@
+/* ========================================
+   CSS ESPECÍFICO PARA PÁGINA DE CURSOS
+   ======================================== */
+
 :root {
   --brand-primary: #002855;
   /* azul escuro */
@@ -180,4 +184,15 @@ a, button, .nav-link, .btn, .feature-icon, .card {
 .social-icons a:hover {
   transform: translateY(-3px);
   color: var(--brand-cyan);
+}
+
+/* ====================================================
+   ESTILOS PARA CARDS DE CURSOS
+   ==================================================== */
+/* Padroniza imagens dos cards com altura fixa e crop adequado */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  /* object-fit: cover mantém proporção e preenche toda área */
+  /* Evita distorção e garante uniformidade visual */
 }
