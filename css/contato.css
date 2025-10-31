@@ -32,21 +32,10 @@
 }
 
 
-/* ====================================================
-   CONFIGURAÇÕES GERAIS DO BODY
-   ==================================================== */
 body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  /* SOLUÇÃO STICKY FOOTER:
-     d-flex flex-column min-vh-100 (definidas no HTML) criam:
-     - Layout flexbox vertical
-     - Altura mínima de 100% da viewport
-     - Permite que o footer fique sempre no final da página */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif
 }
 
-/* ====================================================
-   FOOTER - RODAPÉ DA PÁGINA
-   ==================================================== */
 footer {
   background: var(--brand-primary);
   color: var(--brand-light)
@@ -70,6 +59,36 @@ form textarea {
 form textarea {
   resize: none;
 }
+
+.whatsapp-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, .35);
+  z-index: 1040;
+  text-decoration: none;
+  font-size: 26px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.whatsapp-fab img {
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(37, 211, 102, .45)
+}
+
 
 /*celulares grandes*/
 @media (max-width: 768px) {
@@ -107,4 +126,3 @@ form textarea {
     padding: 12px;
   }
 }
-

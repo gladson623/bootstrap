@@ -10,27 +10,47 @@
   <title>UniALFA Umuarama — Contato</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
-
+<body>
+  <!-- Navbar: Barra de navegação responsiva do Bootstrap -->
+  <!-- navbar-expand-lg: Expande menu em telas grandes -->
+  <!-- navbar-dark: Tema escuro para contraste com fundo azul -->
+  <!-- navbar-customed: Classe CSS personalizada para cor de fundo -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-customed">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#"><span class="text-info">Uni</span>ALFA</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
-        aria-expanded="false" aria-label="Alternar navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
-          <li class="nav-item"><a class="nav-link" href="infraestrutura.html">Infraestrutura</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
-        </ul>
+      <!-- container: Centraliza conteúdo e aplica margem responsiva -->
+      <div class="container">
+          <!-- navbar-brand: Logo/marca da empresa com tipografia customizada -->
+          <!-- fw-bold: Font-weight bold do Bootstrap -->
+          <!-- text-info: Cor ciano do Bootstrap para "Uni" -->
+          <a class="navbar-brand fw-bold" href="#"><span class="text-info">Uni</span>ALFA</a>
+          
+          <!-- Botão hamburger para dispositivos móveis -->
+          <!-- navbar-toggler: Estilo padrão do Bootstrap para botão menu mobile -->
+          <!-- data-bs-toggle="collapse": Ativa/desativa menu no mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+              aria-controls="nav" aria-expanded="false" aria-label="Alternar navegação">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- Menu de navegação que colapsa em mobile -->
+          <!-- collapse navbar-collapse: Classes do Bootstrap para menu responsivo -->
+          <div class="collapse navbar-collapse" id="nav">
+              <!-- navbar-nav: Lista de navegação do Bootstrap -->
+              <!-- ms-auto: Margin-start auto (alinha à direita) -->
+              <ul class="navbar-nav ms-auto">
+                  <!-- nav-item: Item individual do menu -->
+                  <!-- nav-link: Estilo de link da navbar do Bootstrap -->
+                  <!-- active: Indica página atual -->
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="infraestrutura.html">Infraestrutura</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
+              </ul>
+          </div>
       </div>
-    </div>
   </nav>
 
-  <section class="container my-5 flex-grow-1">
+
+  <section class="container my-5 ">
     <div class="row justify-content-center align-items-start">
       <div class="col-lg-8 col-md-10 col-sm-12">
         <div class="formContato p-4 rounded shadow-lg bg-white">
@@ -56,7 +76,7 @@
 
             <div class="mb-3">
               <label for="mensagem" class="form-label fw-semibold">Mensagem</label>
-              <textarea id="mensagem" class="form-control" rows="6" placeholder="Digite sua mensagem aqui..."
+              <textarea class="form-control" rows="6" placeholder="Digite sua mensagem aqui..."
                 required></textarea>
             </div>
 
@@ -67,7 +87,7 @@
     </div>
   </section>
 
-  <footer class="footer-custom text-center p-4 mt-auto">
+  <footer class="footer-custom mt-5 text-center p-4">
     <small class="d-block">© 2025 UniALFA Umuarama</small>
     <small class="d-block">Av. Paraná, 7327 — Zona III — Umuarama-PR</small>
 
@@ -80,6 +100,14 @@
           class="bi bi-youtube"></i></a>
     </div>
   </footer>
+
+    <!-- Botão flutuante do WhatsApp (FAB - Floating Action Button) -->
+    <!-- whatsapp-fab: Classe personalizada que cria botão circular fixo -->
+    <!-- Posicionado no canto inferior direito da tela -->
+    <!-- aria-label: Acessibilidade para leitores de tela -->
+  <a class="whatsapp-fab" href="https://wa.me/5544991168932" target="_blank" aria-label="Fale no WhatsApp">
+    <img src="img/whatsapp.png" alt="">
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
