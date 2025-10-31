@@ -6,8 +6,16 @@
   --brand-light: #f5faff;
 }
 
+/* ====================================================
+   CONFIGURAÇÕES GERAIS DO BODY
+   ==================================================== */
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  /* SOLUÇÃO STICKY FOOTER:
+     d-flex flex-column min-vh-100 (definidas no HTML) criam:
+     - Layout flexbox vertical
+     - Altura mínima de 100% da viewport
+     - Permite que o footer fique sempre no final da página */
 }
 
 .navbar {

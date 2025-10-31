@@ -10,12 +10,20 @@
   <title>UniALFA Umuarama — Contato</title>
 </head>
 
-<body>
-  <!-- Navbar: Barra de navegação responsiva do Bootstrap -->
-  <!-- navbar-expand-lg: Expande menu em telas grandes -->
-  <!-- navbar-dark: Tema escuro para contraste com fundo azul -->
-  <!-- navbar-customed: Classe CSS personalizada para cor de fundo -->
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-customed">
+<body class="d-flex flex-column min-vh-100">
+  
+  <!-- ====================================================
+       HEADER - CABEÇALHO SEMÂNTICO DA PÁGINA
+       ==================================================== -->
+  <!-- header: Elemento HTML5 semântico que define o cabeçalho da página -->
+  <!-- Melhora acessibilidade e ajuda leitores de tela a identificar o cabeçalho -->
+  <!-- Segue boas práticas modernas de estrutura semântica -->
+  <header>
+    <!-- Navbar: Barra de navegação responsiva do Bootstrap -->
+    <!-- navbar-expand-lg: Expande menu em telas grandes -->
+    <!-- navbar-dark: Tema escuro para contraste com fundo azul -->
+    <!-- navbar-customed: Classe CSS personalizada para cor de fundo -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-customed">
       <!-- container: Centraliza conteúdo e aplica margem responsiva -->
       <div class="container">
           <!-- navbar-brand: Logo/marca da empresa com tipografia customizada -->
@@ -47,10 +55,23 @@
               </ul>
           </div>
       </div>
-  </nav>
+    </nav>
+  </header>
 
-
-  <section class="container my-5 ">
+  <!-- ====================================================
+       MAIN - CONTEÚDO PRINCIPAL DA PÁGINA
+       ==================================================== -->
+  <!-- main: Elemento HTML5 semântico que define o conteúdo principal -->
+  <!-- Excelente para acessibilidade, SEO e estrutura semântica -->
+  <!-- Permite que leitores de tela pulem direto ao conteúdo principal -->
+  <main class="flex-grow-1">
+    <!-- ====================================================
+         SEÇÃO DE CONTATO - FORMULÁRIO PRINCIPAL
+         ==================================================== -->
+    <!-- section: Elemento semântico para seção temática de conteúdo -->
+    <!-- container: Classe Bootstrap para centralização e margem responsiva -->
+    <!-- my-5: Margin vertical de 3rem (48px) para espaçamento adequado -->
+    <section class="container my-5">
     <div class="row justify-content-center align-items-start">
       <div class="col-lg-8 col-md-10 col-sm-12">
         <div class="formContato p-4 rounded shadow-lg bg-white">

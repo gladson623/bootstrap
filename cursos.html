@@ -14,16 +14,23 @@
     <link rel="stylesheet" href="css/cursos.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <!-- ====================================================
-         NAVBAR - BARRA DE NAVEGAÇÃO RESPONSIVA
+         HEADER - CABEÇALHO SEMÂNTICO DA PÁGINA
          ==================================================== -->
-    <!-- navbar: Classe Bootstrap que cria barra de navegação -->
-    <!-- navbar-expand-lg: Menu expande em telas Large (≥992px), colapsa em mobile -->
-    <!-- navbar-dark: Tema escuro - texto branco para contraste com fundo escuro -->
-    <!-- navbar-customed: Classe CSS personalizada que define cor de fundo azul -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-customed">
+    <!-- header: Elemento HTML5 semântico que define o cabeçalho da página -->
+    <!-- Melhora acessibilidade e ajuda leitores de tela a identificar o cabeçalho -->
+    <!-- Segue boas práticas modernas de estrutura semântica -->
+    <header>
+        <!-- ====================================================
+             NAVBAR - BARRA DE NAVEGAÇÃO RESPONSIVA
+             ==================================================== -->
+        <!-- navbar: Classe Bootstrap que cria barra de navegação -->
+        <!-- navbar-expand-lg: Menu expande em telas Large (≥992px), colapsa em mobile -->
+        <!-- navbar-dark: Tema escuro - texto branco para contraste com fundo escuro -->
+        <!-- navbar-customed: Classe CSS personalizada que define cor de fundo azul -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-customed">
         
         <!-- container: Classe Bootstrap que centraliza conteúdo e adiciona margens responsivas -->
         <!-- Limita largura máxima e centraliza horizontalmente -->
@@ -70,14 +77,22 @@
             </div>
         </div>
     </nav>
+    </header>
 
     <!-- ====================================================
-         SEÇÃO HERO - BANNER PRINCIPAL DA PÁGINA
+         MAIN - CONTEÚDO PRINCIPAL DA PÁGINA
          ==================================================== -->
-    <!-- section: Elemento HTML5 semântico para seções de conteúdo -->
-    <!-- hero: Classe CSS personalizada que define imagem de fundo e overlay escuro -->
-    <!-- text-center: Classe Bootstrap que centraliza todo texto horizontalmente -->
-    <section class="hero text-center">
+    <!-- main: Elemento HTML5 semântico que define o conteúdo principal -->
+    <!-- Excelente para acessibilidade, SEO e estrutura semântica -->
+    <!-- Permite que leitores de tela pulem direto ao conteúdo principal -->
+    <main class="flex-grow-1">
+        <!-- ====================================================
+             SEÇÃO HERO - BANNER PRINCIPAL DA PÁGINA
+             ==================================================== -->
+        <!-- section: Elemento HTML5 semântico para seções de conteúdo -->
+        <!-- hero: Classe CSS personalizada que define imagem de fundo e overlay escuro -->
+        <!-- text-center: Classe Bootstrap que centraliza todo texto horizontalmente -->
+        <section class="hero text-center">
         
         <!-- container: Classe Bootstrap que limita largura e centraliza conteúdo -->
         <!-- Responsivo: 100% em mobile, largura fixa em desktop -->
@@ -690,9 +705,14 @@
             </div>
         </div>
     </div>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer-custom mt-5 text-center p-4">
+    <!-- ====================================================
+         FOOTER - RODAPÉ SEMÂNTICO DA PÁGINA
+         ==================================================== -->
+    <!-- Footer: Elemento HTML5 semântico para rodapé -->
+    <!-- Contém informações institucionais e links de redes sociais -->
+    <footer class="footer-custom text-center p-4 mt-auto">
         <small class="d-block">© 2025 UniALFA Umuarama</small>
         <small class="d-block">Av. Paraná, 7327 — Zona III — Umuarama-PR</small>
         
@@ -704,8 +724,14 @@
     </footer>
 
     <!-- WhatsApp FAB -->
-    <a class="whatsapp-fab" href="https://wa.me/5544991168932" target="_blank" aria-label="Fale no WhatsApp">
-        <img src="img/whatsapp.png" alt="">
+    <!-- ====================================================
+         BOTÃO FLUTUANTE WHATSAPP (FAB)
+         ==================================================== -->
+    <!-- Floating Action Button: Botão de ação flutuante fixo -->
+    <!-- aria-label: Acessibilidade - descreve ação para leitores de tela -->
+    <a class="whatsapp-fab" href="https://wa.me/5544991168932" target="_blank" aria-label="Fale conosco pelo WhatsApp - Abre em nova aba">
+        <!-- alt descritivo melhora acessibilidade -->
+        <img src="img/whatsapp.png" alt="Ícone do WhatsApp para contato direto">
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

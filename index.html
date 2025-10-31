@@ -12,13 +12,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-    <!-- Navbar: Barra de navegação responsiva do Bootstrap -->
-    <!-- navbar-expand-lg: Expande menu em telas grandes -->
-    <!-- navbar-dark: Tema escuro para contraste com fundo azul -->
-    <!-- navbar-customed: Classe CSS personalizada para cor de fundo -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-customed">
+    <!-- ====================================================
+         HEADER - CABEÇALHO SEMÂNTICO DA PÁGINA
+         ==================================================== -->
+    <!-- header: Elemento HTML5 semântico que define o cabeçalho da página -->
+    <!-- Melhora acessibilidade e ajuda leitores de tela a identificar o cabeçalho -->
+    <!-- Segue boas práticas modernas de estrutura semântica -->
+    <header>
+        <!-- Navbar: Barra de navegação responsiva do Bootstrap -->
+        <!-- navbar-expand-lg: Expande menu em telas grandes -->
+        <!-- navbar-dark: Tema escuro para contraste com fundo azul -->
+        <!-- navbar-customed: Classe CSS personalizada para cor de fundo -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-customed">
         <!-- container: Centraliza conteúdo e aplica margem responsiva -->
         <div class="container">
             <!-- navbar-brand: Logo/marca da empresa com tipografia customizada -->
@@ -51,11 +58,22 @@
             </div>
         </div>
     </nav>
+    </header>
 
-    <!-- Seção Hero: Banner principal com imagem de fundo e call-to-action -->
-    <!-- hero: Classe CSS personalizada com background-image e overlay -->
-    <!-- text-center: Centraliza todo texto horizontalmente (Bootstrap) -->
-    <section class="hero text-center">
+    <!-- ====================================================
+         MAIN - CONTEÚDO PRINCIPAL DA PÁGINA
+         ==================================================== -->
+    <!-- main: Elemento HTML5 semântico que define o conteúdo principal -->
+    <!-- Excelente para acessibilidade, SEO e estrutura semântica -->
+    <!-- Permite que leitores de tela pulem direto ao conteúdo principal -->
+    <main class="flex-grow-1">
+        <!-- ====================================================
+             SEÇÃO HERO - BANNER PRINCIPAL
+             ==================================================== -->
+        <!-- Seção Hero: Banner principal com imagem de fundo e call-to-action -->
+        <!-- hero: Classe CSS personalizada com background-image e overlay -->
+        <!-- text-center: Centraliza todo texto horizontalmente (Bootstrap) -->
+        <section class="hero text-center">
         <!-- container: Limita largura e centraliza conteúdo responsivamente -->
         <div class="container">
             <!-- display-5: Tipografia grande do Bootstrap para títulos principais -->
@@ -210,13 +228,13 @@
         <div id="infraCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner rounded-4 shadow">
                 <div class="carousel-item active">
-                    <img src="img/foto-biblioteca.jpg" class="d-block w-100" alt="Biblioteca">
+                    <img src="img/foto-biblioteca.jpg" class="d-block w-100" alt="Biblioteca moderna da UniALFA Umuarama com amplo acervo e espaços de estudo">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/foto-laboratorio.jpg" class="d-block w-100" alt="Laboratórios">
+                    <img src="img/foto-laboratorio.jpg" class="d-block w-100" alt="Laboratórios de informática da UniALFA com equipamentos modernos para ensino tecnológico">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/foto-auditorio.jpg" class="d-block w-100" alt="Auditório">
+                    <img src="img/foto-auditorio.jpg" class="d-block w-100" alt="Auditório principal da UniALFA Umuarama para palestras, eventos e apresentações acadêmicas">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#infraCarousel" data-bs-slide="prev">
@@ -260,13 +278,17 @@
             <a href="infraestrutura.html" class="btn btn-primary btn-lg">Saiba mais</a>
         </div>
     </section>
+    </main>
 
+    <!-- ====================================================
+         FOOTER - RODAPÉ SEMÂNTICO DA PÁGINA
+         ==================================================== -->
     <!-- Footer: Rodapé com informações da instituição -->
     <!-- footer-custom: Classe personalizada com fundo azul da marca -->
     <!-- mt-5: Margin-top grande para separar do conteúdo -->
     <!-- text-center: Centraliza todo texto do footer -->
     <!-- p-4: Padding de 1.5rem em todas as direções -->
-    <footer class="footer-custom mt-5 text-center p-4">
+    <footer class="footer-custom text-center p-4 mt-auto">
         <!-- small: Texto menor para informações secundárias -->
         <!-- d-block: Display block para quebrar linha -->
         <small class="d-block">© 2025 UniALFA Umuarama</small>
@@ -293,7 +315,7 @@
     <!-- Posicionado no canto inferior direito da tela -->
     <!-- aria-label: Acessibilidade para leitores de tela -->
     <a class="whatsapp-fab" href="https://wa.me/5544991168932" target="_blank" aria-label="Fale no WhatsApp">
-        <img src="img/whatsapp.png" alt="">
+        <img src="img/whatsapp.png" alt="Ícone do WhatsApp para contato direto">
     </a>
 
     <!-- Scripts necessários para funcionamento -->
