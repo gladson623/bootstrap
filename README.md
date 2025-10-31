@@ -11,7 +11,7 @@ Este projeto apresenta um site institucional completo para uma faculdade, inclui
 - **Homepage**: Apresentação institucional com hero section e destaques
 - **Cursos**: Catálogo interativo com modais detalhados
 - **Infraestrutura**: Galeria de facilidades e informações sobre bolsas
-- **Contato**: Formulário funcional e informações de localização
+- **Contato**: Formulário funcional e informações básicas
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -46,14 +46,11 @@ trabalho_boot/
 │   ├── infra.css              # CSS da infraestrutura
 │   └── contato.css            # CSS do formulário de contato
 │
-├── 📁 img/
-│   ├── hero-campus.jpg        # Banner principal
-│   ├── curso-*.jpg            # Imagens dos cursos
-│   ├── foto-*.jpg             # Fotos da infraestrutura
-│   └── whatsapp.png           # Ícone WhatsApp FAB
-│
-└── 📁 js/
-    └── script.js              # JavaScript personalizado
+└── 📁 img/
+    ├── hero-campus.jpg        # Banner principal
+    ├── curso-*.jpg            # Imagens dos cursos
+    ├── foto-*.jpg             # Fotos da infraestrutura
+    └── whatsapp.png           # Ícone WhatsApp FAB
 ```
 
 ## 🎨 Design System
@@ -122,43 +119,42 @@ trabalho_boot/
 - **Sticky Footer** - Footer sempre no final da página
 
 ### JavaScript Features
-- **Bootstrap Components** - Navbar, modals, carousel
-- **Smooth Scrolling** - Navegação suave entre seções
-- **Form Validation** - Validação client-side
-- **WhatsApp Integration** - FAB com link direto
+- **Bootstrap Components** - Navbar collapse, modals, carousel automático
+- **HTML5 Validation** - Campos obrigatórios com validação nativa
+- **WhatsApp Integration** - FAB com link direto para atendimento
 
 ### Performance
-- **CSS Minificado** - Carregamento otimizado
-- **Imagens Otimizadas** - `object-fit: cover` para proporções
-- **Lazy Loading** - Carregamento progressivo
-- **CDN Resources** - Bootstrap via CDN para cache
+- **CSS Organizado** - Arquivos separados por página para manutenção
+- **Imagens Otimizadas** - `object-fit: cover` para proporções adequadas
+- **CDN Resources** - Bootstrap e ícones via CDN para cache otimizado
 
 ## 📝 Páginas Detalhadas
 
 ### 🏠 Homepage (index.html)
-- **Hero Section**: Banner com call-to-action
-- **Features**: Por que estudar na UniALFA
-- **Cursos Destaque**: Cards com cursos principais
-- **Infraestrutura**: Carousel de imagens
-- **Avaliações**: Conceito MEC e depoimentos
+- **Hero Section**: Banner com call-to-action e botões de navegação
+- **Features**: Por que estudar na UniALFA com badges informativos
+- **Cursos Destaque**: Cards com 3 cursos principais (Direito, Psicologia, Contábeis)
+- **Infraestrutura**: Carousel de imagens das instalações
+- **Qualidade**: Conceito MEC IGC 4 com estrelas de avaliação
+- **CTA Final**: Seção sobre bolsas e formas de ingresso
 
 ### 📚 Cursos (cursos.html)
-- **Grid de Cursos**: Layout responsivo com cards
-- **Modals Detalhados**: Informações completas por curso
-- **Áreas de Atuação**: Lista de possibilidades profissionais
-- **CTAs**: Botões para inscrição e mais informações
+- **Grid de Cursos**: 10 cursos em layout responsivo com cards
+- **Modals Detalhados**: Informações completas por curso com imagens
+- **Cursos Disponíveis**: Administração, Contábeis, Direito, Gestão Hospitalar, Marketing, Pedagogia, Processos Gerenciais, RH, Sistemas para Internet, Psicologia
+- **Áreas de Atuação**: Lista de possibilidades profissionais por curso
+- **CTAs**: Botões "Saiba mais" e "Inscrever-se" em cada modal
 
 ### 🏢 Infraestrutura (infraestrutura.html)
 - **Carousel Principal**: Fotos das instalações
-- **Facilidades**: Grid com imagens e descrições
-- **Bolsas de Estudo**: Informações sobre financiamentos
-- **Localização**: Detalhes do campus
+- **Facilidades**: Grid com imagens e descrições das estruturas do campus
+- **Bolsas de Estudo**: Informações sobre financiamentos e formas de ingresso
 
 ### 📞 Contato (contato.html)
-- **Formulário**: Campos validados e responsivos
-- **Informações**: Endereço, telefone, redes sociais
+- **Formulário**: Campos validados e responsivos (nome, email, telefone, mensagem)
+- **Informações Básicas**: Endereço no footer e redes sociais
 - **Sticky Footer**: Solução para páginas com pouco conteúdo
-- **WhatsApp FAB**: Acesso rápido ao atendimento
+- **WhatsApp FAB**: Acesso rápido ao atendimento via botão flutuante
 
 ## 🚀 Como Executar
 
@@ -239,10 +235,10 @@ git merge feature/nova-funcionalidade
 - [ ] CSS limpo e comentado
 
 ### ✅ JavaScript
-- [ ] Componentes Bootstrap funcionais
-- [ ] Validação de formulários
-- [ ] Tratamento de erros
-- [ ] Performance otimizada
+- [ ] Componentes Bootstrap funcionais (navbar, modals, carousel)
+- [ ] Validação HTML5 nativa nos formulários
+- [ ] Links funcionais (WhatsApp, redes sociais)
+- [ ] Performance otimizada com CDN
 
 ### ✅ Acessibilidade
 - [ ] Contraste adequado (AA)
